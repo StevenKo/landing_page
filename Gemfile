@@ -35,6 +35,8 @@ group :test do
   gem 'turn', '~> 0.8.3', :require => false
 end
 
+gem 'open_graph_helper'
+gem 'facebooker2'
 
 gem 'capistrano'
 gem 'capistrano-ext'
