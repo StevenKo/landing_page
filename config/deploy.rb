@@ -9,7 +9,7 @@ set :repository,  "https://github.com/StevenKo/landing_page.git"
 set :scm, "git"
 set :user, "apps" # 一個伺服器上的帳戶用來放你的應用程式，不需要有sudo權限，但是需要有權限可以讀取Git repository拿到原始碼
 set :port, "22"
-
+ 
 set :deploy_to, "/home/apps/learn_it"
 set :deploy_via, :remote_cache
 set :use_sudo, false
