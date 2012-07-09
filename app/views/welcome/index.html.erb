@@ -41,10 +41,11 @@
             
             
             <%= form_for @user, :url => welcome_index_path(@user) do |f| %>
-                   Facebook 登入 ： <%= link_to "Facebook登入", user_omniauth_authorize_path(:facebook) , :class => "facebook-login" %>
-                    或者 請留下E-mail:
+                    請留下E-mail:
     				<%= f.text_field :email%>
     				<%= f.submit "送出" %>
+    				或者
+    				 <%= link_to "Facebook登入", user_omniauth_authorize_path(:facebook) , :class => "facebook-login" %>
             <% end %>
             <div class="fb-like-box" data-href="http://www.facebook.com/LearnItCommunity" data-width="900" data-height="200" data-show-faces="true" data-stream="false" data-header="true"></div>
 			

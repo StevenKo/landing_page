@@ -10,4 +10,10 @@ class User < ActiveRecord::Base
   attr_accessible :email, :password, :password_confirmation, :remember_me
 
   has_many :authorizations
+
+  def bind_service(response)
+    provider = response["provider"]
+    uid = response["uid"]
+    authorizations.create(:provider => provider , :uid => uid ) 
+  end
 end

@@ -9,7 +9,7 @@ class Users::OmniauthCallbacksController < Devise::OmniauthCallbacksController
         def #{provider}
           if not current_user.blank?
             current_user.bind_service(env["omniauth.auth"])#Add an auth to existing
-            redirect_to edit_user_registration_path, :notice => "成功邦定了 #{provider} 帳號。"
+            redirect_to root_path, :notice => "成功登入了 #{provider} 帳號。"
           else
             @user = User.find_or_create_for_#{provider}(env["omniauth.auth"])
   
