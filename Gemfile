@@ -41,3 +41,8 @@ gem 'facebooker2'
 
 gem 'capistrano'
 gem 'capistrano-ext'
+
+gem 'devise'
+gem 'omniauth'
+gem 'oauth2'
+gem 'omniauth-facebook'

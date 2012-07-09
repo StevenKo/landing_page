@@ -34,8 +34,18 @@
 			<br>
 			<br>
 隨著愈來愈多的影片上傳至網路，這樣的契機已經到來，LearnIt 將為你篩選這些網路上的教學影片，不論你想學什麼，到 LearnIt 邊看邊學就沒錯了<br><br>
-            LearnIt 會努力在八月初上線，歡迎大家給我們支持鼓勵 :) 
+            LearnIt 會努力在八月初上線，歡迎大家給我們支持鼓勵 :) <br>
+            另外，歡迎留下你的 e-mail 或 利用 Facebook登入，我們一完成就會通知你哦！
             </p>
+            <br>
+            
+            
+            <%= form_for @user, :url => welcome_index_path(@user) do |f| %>
+                   Facebook 登入 ： <%= link_to "Facebook登入", user_omniauth_authorize_path(:facebook) , :class => "facebook-login" %>
+                    或者 請留下E-mail:
+    				<%= f.text_field :email%>
+    				<%= f.submit "送出" %>
+            <% end %>
             <div class="fb-like-box" data-href="http://www.facebook.com/LearnItCommunity" data-width="900" data-height="200" data-show-faces="true" data-stream="false" data-header="true"></div>
 			
 		</div>

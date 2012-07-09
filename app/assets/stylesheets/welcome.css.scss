@@ -5,3 +5,15 @@
 body{
 	background: image-url("background.jpeg");
 }
+
+.facebook-login{
+	background: image-url("btn-fb.png");
+	width: 44px;
+	height: 17px;
+	display: inline-block;
+	text-indent: -9999px;
+}
+
+.facebook-login:hover, .facebook-login:focus{
+	background-position: 0 -17px;
+}
