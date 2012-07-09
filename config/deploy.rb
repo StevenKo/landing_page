@@ -47,8 +47,8 @@ namespace :deploy do
   end
 
   task :copy_config_files, :roles => [:app] do
-    # db_config = "#{shared_path}/config/database.yml"
-    # run "cp #{db_config} #{release_path}/config/database.yml"
+    db_config = "#{shared_path}/config/database.yml.production"
+    run "cp #{db_config} #{release_path}/config/database.yml"
   end
   
   task :update_symlink do
